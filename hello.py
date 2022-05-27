@@ -85,3 +85,16 @@ def hello_world():
 @app.route("/works")
 def it_works():
     return "IT Works! nyehehe"
+    
+@app.route('/chat', methods=['POST'])
+def chat():
+    if request.method == 'POST':
+        data = request.form['message']
+        hasil=response(data)
+        if(data==hasil):
+            hasil="Maaf, kami tidak bisa mengerti pertanyaan anda"
+        return response_api({
+            'code': 200,
+            'message': 'Berhasil',
+            'data': hasil
+        })
