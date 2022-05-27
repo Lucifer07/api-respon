@@ -5,9 +5,6 @@ import random
 import nltk
 from flask import abort, Flask, jsonify, redirect, request, url_for
 import json
-nltk.download('punkt')
-nltk.download('omw-1.4')
-nltk.download('wordnet')
 f = open('data.txt', 'r', errors='ignore')
 raw = f.read()
 raw = raw.lower()
@@ -110,8 +107,8 @@ def internal_server_error(e):
         'data': None
     })
 @app.route('/')
-def root():
-    return '<h1>Hello Suresh!</h1>'
+def dash():
+    return '<h1>Hello all!</h1>'
 @app.route('/chat', methods=['POST'])
 def chat():
     if request.method == 'POST':
