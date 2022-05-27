@@ -1,3 +1,4 @@
+from flask import Flask
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import string
@@ -106,9 +107,12 @@ def internal_server_error(e):
         'message': 'Mohon maaf, ada gangguan pada server kami.',
         'data': None
     })
-@app.route('/')
-def dash():
-    return '<h1>Hello all!</h1>'
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World! Deploy nich...</p>"
+
 @app.route('/chat', methods=['POST'])
 def chat():
     if request.method == 'POST':
@@ -121,5 +125,3 @@ def chat():
             'message': 'Berhasil',
             'data': hasil
         })
-if __name__ == '__main__':
-    app.run(debug=True)
