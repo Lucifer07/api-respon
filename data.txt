@@ -1,88 +1,14 @@
-Hallo Selamat Datang
-Aku CikCik 
-Ada yang bisa CikCik bantu?
+Hallo Selamat Datang, Aku CikCik, Ada yang bisa CikCik bantu?
 
-Tempat wisata apa saja yang ada di bali? :
-Pantai: Pantai Pandawa, Pantai Sanur, Pantai Kuta, Pantai Melasti, Pantai Canggu
-Gunung: Gunung Agung, Gunung Batur
-Pura: Pura Besakih, Pura Penataran Agung Lempuyang
-Sawah: Tagallalang Rice Terrace
-Hewan: Bali Zoo, Bali Bird Park
-Alam: Air Terjun Kintamani, Bedugul, Lapangan Puputan Margarana
-Bersejarah: Tirta Gangga, Monumen Bajra Sandhi, Museum Bali, Museum Bung Karno.
-
-Tempat wisata di sekitaran Denpasar? :
-Pantai: Pantai Sanur, Pantai Seminyak
-Gunung: Gunung Catur
-Pura: Pura Agung Jagatnatha Temple, Pura Campuhan Windhu Segara Padanggalak Denpasar, Pura Maospahit
-Sawah: Mohon Maaf Kami Belum Bisa Menemukan Destinasi Wisata yang Cocok
-Hewan: Mohon Maaf Kami Belum Bisa Menemukan Destinasi Wisata yang Cocok
-Alam: Bukit Mende
-Bersejarah: Monumen Bajra Sandhi, Museum Bali, Museum Bung Karno.
-
-Tempat wisata pantai yang ada di Denpasar?:
-Pantai: Pandawa, sanur, kuta, melasti.
-
-Tempat wisata Gunung yang ada di Denpasar?:
-Gunung: Gunung Catur.
-
-Tempat wisata pura yang ada di Denpasar?:
-Pura: Pura Agung Jagatnatha Temple, Pura Campuhan Windhu Segara Padanggalak Denpasar, Pura Maospahit.
-
-Tempat wisata sawah yang ada di Denpasar?:
-Sawah: Mohon Maaf Kami Belum Bisa Menemukan Destinasi Wisata yang Cocok.
-
-Tempat wisata hewan yang ada di Denpasar?:
-Hewan: Mohon Maaf Kami Belum Bisa Menemukan Destinasi Wisata yang Cocok.
-
-Tempat wisata alam yang ada di Denpasar?:
-Alam: Bukit Mende.
-
-Tempat wisata bersejarah yang ada di Denpasar?:
-Bersejarah: Monumen Bajra Sandhi, Museum Bali, Museum Bung Karno.
-
-
-
-Tempat wisata di sekitaran Jimbaran?:
-
-Tempat wisata pantai yang ada di Jimbaran?:
-
-Tempat wisata Gunung yang ada di Jimbaran?:
-
-Tempat wisata pura yang ada di Jimbaran?:
-
-Tempat wisata sawah yang ada di Jimbaran?:
-
-Tempat wisata hewan yang ada di Jimbaran?:
-
-Tempat wisata alam yang ada di Jimbaran?:
-
-Tempat wisata bersejarah yang ada di Jimbaran?:
-
-Gianyar
-
-Badung
-
-dkk
-
-
-Tempat wisata yang cocok di kunjungi pada musim hujan/hujan?:
-Museum, dkk.
-
-Tempat wisata yang cocok di kunjungi pada musim Kemarau/Panas?:
-Pantai, Gunung dkk.
-
-Tempat wisata yang memiliki tempat ibadah?:
-Pantai dreamland, Puja Mandala Nusa Dua dkk.
-
-Daftar tempat wisata di bawah Rp. 50.000?:
-Pantai Canggu, Museum Bali, Museum Bung Karno, Taman Puputan Margarana.
-
-Tansportasi Umum yang bisa di gunakan untuk berpergian di bali?:
-Bus Sarbagita, Blue Bird, Grab, Gojek dkk.
-
-Tempat makan halal di bali?:
-Warung makan syakinah.
+Bali merupakan daerah wisata yang paling sering di kunjungi di indonesia.
+Bali memiliki berbagai macam tempat wisata seperti Pantai Pandawa, Pantai Sanur, Pantai Kuta, Pantai Melasti, Pantai Canggu, Gunung Agung, Gunung Batur, Pura Besakih, Pura Penataran Agung Lempuyang, Tagallalang Rice Terrace, Bali Zoo, Bali Bird Park, Air Terjun Kintamani, Bedugul, Lapangan Puputan Margarana, Tirta Gangga, Monumen Bajra Sandhi, Museum Bali, Museum Bung Karno. 
+Bali sendiri terdiri dari 9 kabupaten dan di setiap kabupatennya memiliki daerah-daerah wisata yang sangat indah seperti di denpasar ada wisata pantai seperti Pantai Sanur, Pantai Seminyak, wisata gunung seperti Gunung Catur, Pura Agung Jagatnatha Temple, Pura Campuhan Windhu Segara Padanggalak Denpasar, Pura Maospahit dan wisata alam seperti Bukit Mende serta wisata bersejarah yaitu Monumen Bajra Sandhi, Museum Bali, Museum Bung Karno.
+Ada beberapa tempat wisata yang cocok di kunjungi pada musim hujan yaitu Museum dan tempat-tempat indoor lainnya. 
+Dan ada beberapa tempat wisata yang cocok di kunjungi pada musim Kemarau atau panas yaitu Pantai, Gunung dkk.
+Terdapat beberapa tempat wisata yang memiliki tempat ibadah yaitu Pantai dreamland, Puja Mandala Nusa Dua dkk.
+Berikut daftar tempat wisata di bawah Rp. 50.000 yaitu Pantai Canggu, Museum Bali, Museum Bung Karno, Taman Puputan Margarana.
+Tansportasi Umum yang bisa di gunakan untuk berpergian di bali yaitu Bus Sarbagita, Blue Bird, Grab, Gojek dkk.
+Tempat makan halal di bali salah satunya yaitu Warung makan syakinah.
 
 
 
