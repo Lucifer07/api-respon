@@ -1,76 +1,55 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import string
 import random
 import nltk
 from flask import abort, Flask, jsonify, redirect, request, url_for
-import json
-nltk.download('punkt')
-nltk.download('omw-1.4')
-nltk.download('wordnet')
 f = open('data.txt', 'r', errors='ignore')
 raw = f.read()
 raw = raw.lower()
 sentence_list = nltk.sent_tokenize(raw)
-def greeting_response(text):
-    text = text.lower()
-    
-    #Bots greeting respone
-    bot_greetings = ['howdy','hi','hello','hola']
-    
-    #Users greeting
-    user_greetings = ['hi','hey','hello','greetings','wassup']
-    
-    for word in text.split():
-        if word in user_greetings:
-            return random.choice(bot_greetings)
-        
-    #Random response to greeting
-def gratitude_response(text):
-    text=text.lower()
-    bot_gratitude = ['thank you','thanks','that is very kind of you','you are welcome']
-    for word in text.split():
-        if word in bot_gratitude:
-            return random.choice(bot_gratitude)
-def index_sort(list_var):
-    length = len(list_var)
-    list_index = list(range(0, length))
-    
-    x = list_var        
-    for i in range(length):
-        for j in range(length):
-            if x[list_index[i]] > x[list_index[j]]:
-                #swap
-                temp = list_index[i]
-                list_index[i] = list_index[j]
-                list_index[j] = temp
-    return list_index
-def response(user_input):
-    user_input=user_input.lower()
-    sentence_list.append(user_input)
-    bot_response= ''
-    cm=CountVectorizer().fit_transform(sentence_list)
-    similarity_scores=cosine_similarity(cm[-1],cm)
-    similarity_scores_list=similarity_scores.flatten()
-    index=index_sort(similarity_scores_list)
-    index=index[1:]
-    response_flag=0
-    
-    j=0
-    for i in range(len(index)):
-        if similarity_scores_list[index[i]]>0.0:
-            bot_response=bot_response+' '+sentence_list[index[i]]
-            response_flag=1
-            j=j+1
-        if j>2:
-            break
+word_tokens = nltk.word_tokenize(raw)
+lemmer = nltk.stem.WordNetLemmatizer()
+def LemTokens(tokens):
+    return [lemmer.lemmatize(token) for token in tokens]
 
-        if response_flag==0:
-            bot_response=bot_response+" "+"Maaf, kami tidak bisa mengerti pertanyaan anda"
 
-        sentence_list.remove(user_input) 
+remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 
-        return bot_response
+
+def LemNormalize(text):
+    return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
+
+
+# Salam Pembuka
+salam_input_user = ("hello", "hi", "yuhuy", "oiy", "hey")
+salam_respon_bot = ["hi", "hello", "yuhuy", "oit", "hey"]
+
+def greeting(scentence):
+
+    for word in scentence.split():
+        if word.lower() in salam_input_user:
+            return random.choice(salam_respon_bot)
+# Respon
+def response(user_response):
+    chatbot_response = ''
+    sentence_list.append(user_response)
+    TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words="english")
+    tfidf = TfidfVec.fit_transform(sentence_list)
+    vals = cosine_similarity(tfidf[-1], tfidf)
+    idx = vals.argsort()[0][-2]
+    flat = vals.flatten()
+    flat.sort()
+    req_tfidf = flat[-2]
+    if(req_tfidf == 0):
+        chatbot_response = chatbot_response + "Maaf, kami tidak bisa mengerti pertanyaan anda"
+        return chatbot_response
+
+    else:
+        chatbot_response = chatbot_response+sentence_list[idx]
+        return chatbot_response
+
 def response_api(data):
     return (
         jsonify(**data),
@@ -82,10 +61,6 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World! Deploy nich...</p>"
 
-@app.route("/works")
-def it_works():
-    return "IT Works! nyehehe"
-    
 @app.route('/chat', methods=['POST'])
 def chat():
     if request.method == 'POST':
