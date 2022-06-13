@@ -73,3 +73,9 @@ def chat():
             'message': 'Berhasil',
             'data': hasil
         })
+    else:
+        return response_api({
+            'code': 400,
+            'message': 'Gagal',
+            'data': 'Tidak dapat mengakses'
+        })
