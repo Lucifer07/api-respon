@@ -4,7 +4,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import string
 import random
 import nltk
-from flask.ext.cors import CORS, cross_origin
+from flask_cors import CORS
 from flask import abort, Flask, jsonify, redirect, request, url_for
 f = open('data.txt', 'r', errors='ignore')
 raw = f.read()
@@ -14,15 +14,9 @@ word_tokens = nltk.word_tokenize(raw)
 lemmer = nltk.stem.WordNetLemmatizer()
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
-
-
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
-
-
 def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
-
-
 # Salam Pembuka
 salam_input_user = ("hello", "hi", "yuhuy", "oiy", "hey")
 salam_respon_bot = ["hi", "hello", "yuhuy", "oit", "hey"]
@@ -57,12 +51,10 @@ def response_api(data):
         data['code']
     )
 app = Flask(__name__)
+CORS(app)
 @app.route("/")
 def hello_world():
     return "<p>Hello, World! Deploy nich...</p>"
-cors = CORS(app, resources={r"/chat": {"origins": "*"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
-
 @app.route('/chat', methods=['POST'])
 @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def chat():
