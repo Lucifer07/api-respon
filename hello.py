@@ -24,7 +24,7 @@ except:
     intents_file = open('intents.json').read()
     intents = json.loads(intents_file)
     for intent in intents['intents']:
-        for pattern in intent['patterns']:
+        for pattern in intent['inp']:
             #tokenize each word
             word = nltk.word_tokenize(pattern)
             words.extend(word)
@@ -72,7 +72,7 @@ finally:
         return sentence_words
     # return bag of words array: 0 or 1 for words that exist in sentence
     def bag_of_words(sentence, words, show_details=True):
-        # tokenizing patterns
+        # tokenizing inp
         sentence_words = clean_up_sentence(sentence)
         # bag of words - vocabulary matrix
         bag = [0]*len(words)  
