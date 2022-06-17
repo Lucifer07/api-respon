@@ -56,7 +56,6 @@ CORS(app)
 def hello_world():
     return "<p>Hello, World! Deploy nich...</p>"
 @app.route('/chat', methods=['POST'])
-@cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def chat():
     if request.method == 'POST':
         data = request.form['message']
